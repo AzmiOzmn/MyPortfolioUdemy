@@ -26,6 +26,7 @@ Admin paneli ile:
 
 ## Görseller
 Aşağıda proje ile ilgili ekran görüntülerini bulabilirsiniz:
+
 1)
  ![1](https://github.com/user-attachments/assets/5424eab1-8751-4a09-ad2f-78527afc11ef)
 2)
