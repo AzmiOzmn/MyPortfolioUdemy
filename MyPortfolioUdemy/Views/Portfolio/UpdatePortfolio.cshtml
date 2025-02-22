@@ -1,0 +1,48 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Portfolyo Güncelle</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Portfolyo Alanı</div>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" asp-for="PortfolioId" />
+                        <form method="post">
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Alt Açıklama</label>
+                            <input type="text" asp-for="SubTitle" class="form-control" />
+                            <br />
+                            <label>Foto Url</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <label>Url</label>
+                            <input type="text" asp-for="Url" class="form-control" />
+                            <br />
+                            <label>Açiklama</label>
+                            <input type="text" asp-for="Description" class="form-control" />
+                            <br />
+                            
+                            <button class="btn btn-primary">Güncelle</button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Portfolyo</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Portfolyo Alanı</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Ýletiþim bilgilerine burdan erişebilir ve güncelleyebilirsiniz .
+                        </div>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Sirket</th>
+                                    <th scope="col">Alt Açiklama</th>
+                                    <th scope="col">Foto Url</th>
+                                    <th scope="col">Url</th>
+                                    <th scope="col">Açiklama</th>
+                                    <th scope="col">Sil</th>
+                                    <th scope="col">Güncelle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.PortfolioId</td>
+
+                                        <td>@item.Title</td>
+                                        <td>@item.SubTitle</td>
+                                        <td>@item.ImageUrl</td>
+                                        <td>@item.Url</td>
+                                        <td>@item.Description</td>
+                                        <td><a href="/Portfolio/DeletePortfolio/@item.PortfolioId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Portfolio/UpdatePortfolio/@item.PortfolioId" class="btn btn-success">Güncelle</a></td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+
+                        <a href="/Portfolio/CreatePortfolio" class="btn btn-primary">Yeni Portfolyo Ekle</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
